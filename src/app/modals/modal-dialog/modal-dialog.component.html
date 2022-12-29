@@ -1,0 +1,33 @@
+<div class="row justify-content-center  mb-4">
+    <h2 class="pr-3">Add a Person</h2>
+    <button class="align-self-start" mat-mini-fab color="primary" [mat-dialog-close]="false" >
+      <mat-icon matSuffix>clear</mat-icon>
+    </button>
+</div>
+<div>
+  <div [formGroup]="addForm">
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="First Name" formControlName="firstName"  cdkFocusInitial>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="career" formControlName="career">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button mat-stroked-button color="primary" (click)="onSave()">Save</button>
+    </div>
+    <!-- <div class="col">
+      <button mat-stroked-button color="secondary" (click)="onDelete()">Delete</button>
+    </div> -->
+  </div>
+</div>
